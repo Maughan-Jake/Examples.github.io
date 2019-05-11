@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta name="Robots" content="Follow, Index" />
+    <meta name="Distribution" content="Worldwide" />
+    <meta name="Rating" content="General" />
+
+    <meta name="DESCRIPTION" content="Proficiency with the Code Topics Page BYU-Idaho CIT 261 Class" />
+    <meta name="KEYWORDS" content="CIT 261, BYU-Idaho, Home Page" />
+    <meta name="Author" content="Jake Maughan" />
+    <meta name="School" content="BYU-Idaho" />
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="scripts/main.js" async defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Jake Maughan</h1>
+            <h2>CIT 261 - Objects</h2>
+            <a href="index.html">Home</a>
+        </header>
+        <main>
+            <h3>Vehicle & Truck Inheritance, Objects, & Functions</h3>
+            <p id="result1"></p>
+            <p id="result2"></p>
+            <p id="result3"></p>
+            <p id="result4"></p>
+
+            <h3>Instantiation</h3>
+            <label for="instantiation">Enter a number between 0 - 5: <input type="number" name="selection" id="instantiation"></label><br>
+            <button onclick="getClient()">Find your Harry Potter character</button>
+
+            <h3>properties</h3>
+            <p id="result5"></p>
+        </main>
+    <script>
+        // Define the superclass
+        class Vehicle {
+            constructor(make, model, color) {
+                this.make = make;
+                this.model = model;
+                this.color = color;
+            }
+
+            // superclass method
+            purchase(vehicle) {
+                console.log(`Here is your new ${vehicle.make} ${vehicle.model}. Enjoy your ${vehicle.color} machine!`);
+            }
+
+        }
+
+        // Define a superclass method after the class has already been defined
+        Vehicle.prototype.sellVehicle = function (vehicle) { // the prototype object allows all objects in the Vehicle class to point to the function
+            console.log(`Thank you for selling your ${vehicle.make} ${vehicle.model} to us. Enjoy your hard earned cash!`);
+        }
+
+        // define a sub class
+        class Truck extends Vehicle {
+            constructor(make, model, color, numPistons, towCapacity) {
+                // Pass the super values to the super class
+                super(make, model, color);
+                // Define the truck features in the subclass
+                this.numPistons = numPistons;
+                this.towCapacity = towCapacity;
+            }
+        }
+
+        // Define different types of vehicles
+        let honda = new Vehicle('Honda', 'CRF450R', 'red', 2);
+        let suzuki = new Vehicle('Suzuki', 'RMZ250', 'yellow', 2);
+        var tacoma = new Truck('Toyota', 'Tacoma', 'Voodoo Blue', 6, 6700);
+
+        honda.purchase(honda);
+        suzuki.sellVehicle(suzuki);
+        tacoma.sellVehicle(tacoma);
+
+        document.getElementById("result1").innerHTML = `Is tacoma an instance of the Vehicle class? ${tacoma instanceof Vehicle}!`;
+        document.getElementById("result2").innerHTML = `Is tacoma an instance of the Truck class? ${tacoma instanceof Truck}!`;
+        document.getElementById("result3").innerHTML = `Is honda an instance of the Vehicle class? ${honda instanceof Vehicle}!`;
+        document.getElementById("result4").innerHTML = `Is honda an instance of the Truck class? ${honda instanceof Truck}!`;
+
+        // Instantiation clientObject with predefined data
+			var clientObject = {
+						 "clients":
+							[
+								{"firstName":"Harry", "lastName":"Potter"},
+								{"firstName":"Rubeus", "lastName":"Hagridd"}, 
+								{"firstName":"Viktor", "lastName":"Krum"},
+								{"firstName":"Draco", "lastName":"Malfoy"},
+                                {"firstName":"Mad-Eye", "lastName":"Moody"}
+							]
+						};
+
+			function getClient() {
+				var result = "";
+			
+				// get the number from the user
+				var clientNum = document.getElementById('instantiation').value;
+
+				console.log(clientNum);
+
+				// Display the first & last name to the user
+                result = `You have selected ${clientObject.clients[clientNum - 1].firstName} ${clientObject.clients[clientNum - 1].lastName}`;
+				document.getElementById("result5").innerHTML = result;
+			}
+    </script>
+    </body>
+</html>
