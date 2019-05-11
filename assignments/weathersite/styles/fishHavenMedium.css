@@ -1,0 +1,97 @@
+@media only screen and (min-width: 35em) {
+
+    header {
+        grid-template-columns: 1fr 2fr 1fr;
+        height: 140px;
+    }
+
+    header img {
+        width: 100px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .sideNav {
+        display: grid;
+        grid-row: 1 / 5;
+        padding-top: 150px;
+    }
+
+    main {
+        grid-template-columns: 175px 1fr;
+        grid-gap: 10px;
+        padding-right: 10px;
+    }
+
+    .hero {
+        grid-column: 2 / 3;
+    }
+
+    .weatherSummary {
+        margin: -320px 0 130px 20px; 
+    }
+
+    .currentWeather {
+        display: inline-grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    article {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 0 10px;
+    }
+
+    article img {
+        grid-column: 2/3;
+        grid-row: 1/3;
+        margin-top: 30px;
+        width: 350px
+    }
+
+    article h2, article p {
+        grid-column: 1/2;
+    }
+
+    .underImage {
+        grid-column: 1/3;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container figure {
+        margin: 5px 5px 30px;
+    }
+
+    .forecast {
+        display: grid;
+        grid-gap: 5px;
+        padding-bottom: 10px;
+    }
+
+    .family {
+        display: none;
+    }
+
+    .bottom {
+        grid-column: 1/3; 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding-top: 10px;
+    }
+
+    .contact-info {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .google-map {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+}

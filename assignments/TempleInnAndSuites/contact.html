@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Temple Inn & Suites | Contact</title>
+    <meta name="description" content="Temple Inn & Suites | Your go to hotel service for temple attendance">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Temple Inn, Temple Suites, hotel near temple, temple inn contact, temple suites contact" />
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/TempleLogo400px.png" alt="Temple Inn & Suites Logo">
+
+        <nav>
+            <button class="mobileNav" onclick="toggleMenu()">&#8801;</button>
+            <ul id="primaryNav" class="Mainnav hide">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="temple.html">Temple</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li class="active"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main class="contact">
+        <h1>Contact Us</h1>
+        <div class="contactInfo">
+            
+            <h4 class="address">Address</h4>
+            <p class="center">4810 Montgomery Ln #500<br>
+                Bethesda, MD 20814<br></p>
+            
+            <h4 class="tel">Telephone</h4>
+            <p class="center"><a href="tel:1-123-456-7891">(+1) 123-456-7891</a></p>
+            
+            <h4 class="email">Email</h4>
+            <p class="center"><a href="mailto:templeinnandsuites@temples.com">templeinnandsuites@temples.com</a></p>
+            
+        </div>  
+
+        <form action="thanks.html" method="GET" class="formInfo">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label class="top">First Name*<input type="text" name="fname" placeholder="John" required></label>
+                <label class="top">Last Name*<input type="text" name="lname" placeholder="Smith" required></label>
+                <label class="top">Email<input type="email" name="email" placeholder="myemail@gmail.com"></label>
+                <label class="top">Phone*<input type="tel" name="phone" placeholder="1234567890" required></label>
+                <label class="top">Comments<textarea rows="4" cols="30" name="comment" placeholder="Enter comments here..."></textarea></label>
+            </fieldset>
+        
+            <div class="submit">
+                <input type="submit" name="submit" value="Contact Me" class="submitBtn mBottom">
+            </div>
+        </form>
+
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe id="gmap_canvas" 
+                src="https://maps.google.com/maps?q=4810%20Montgomery%20Ln%20%23500%2C%20Bethesda%2C%20MD%2020814&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    ></iframe>
+                <a href="https://www.pureblack.de/webdesign/"></a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="contactUs"><a href="contact.html">Contact us!</a></p>
+
+        <p>&copy; Temple Inn & Suites | Pictures, descriptions, and services offered from <a href="https://churchofjesuschristtemples.org/">
+                Church of Jesus Christ Temples</a></p>
+    </footer>
+    <script src="scripts/hamburger.js"></script>
+
+</body>
+
+</html>

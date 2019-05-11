@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Storm Center</title>
+    <meta name="description" content="Storm Center | Report a Storm or Unusual Weather">
+    <meta name="keywords" content="storm center, preston, soda springs, fish haven, idaho, weather, under the weather">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/stormCentersmall.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/stormCentermedium.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/stormCenterlarge.css" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text%7CUbuntu" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/Umbrella.svg" alt="Logo">
+
+        <div class="headerText">
+            <h1 class="title">Under The Weather</h1>
+            <div class="motto">Keeping Your Family On The Bright Side </div>
+        </div>
+
+    </header>
+
+    <nav class="clearfix">
+        <button class="mobileNav" onclick="toggleMenu()">&#8801;</button>
+        <ul id="primaryNav" class="mainNav hide">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="sodasprings.html">Soda Springs</a></li>
+            <li><a href="fishhaven.html">Fish Haven</a></li>
+            <li class="active"><a href="#">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Report A Storm</h2>
+
+        <form action="thanks.html" method="GET">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label class="top">First Name*<input type="text" name="fname" pattern="[a-zA-Z -._]{5,99}" placeholder="John" required></label>
+                <label class="top">Last Name*<input type="text" name="lname"  pattern="[a-zA-Z -._]{5,99}" placeholder="Smith" required></label>
+                <label class="top">Email<input type="email" name="email" placeholder="myemail@gmail.com"></label>
+                <label class="top">Phone*<input type="tel" name="phone" placeholder="1234567890" required></label>
+                <label class="top">Zip Code*<input type="number" name="zip" min="00001" max="99999" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Storm Data</legend>
+                <label class="top">Storm Date<input type="date" name="stormDate"></label>
+                <label class="top">Storm Type<input list="stormType"></label>
+                    <datalist id="stormType">
+                        <option value="Flash Flood">
+                        <option value="Hail">
+                        <option value="Hurricane">
+                        <option value="Thunderstorm">
+                        <option value="Tornado">
+                    </datalist>
+
+            <div>Storm Severity: <span id="severity"></span></div>
+            <div class="slidecontainer">
+            <input type="range" min="1" max="10" value="5" class="slider" id="myRange">
+            </div>
+            
+
+            
+            <label class="top">Storm Region<select id="stormRegion" name="StormRegion">
+                <option value="" selected disabled >Select Region ...</option>
+                <option value="preston">Preston</option>
+                <option value="soda springs">Soda Springs</option>
+                <option value="fish haven">Fish Haven</option>
+            </select></label>
+
+            <div>User In-danger</div>
+            <label class="sbs"><input type="radio" name="dangerLevel" value="yes"> Yes</label>
+            <label class="sbs"><input type="radio" name="dangerLevel" value="maybe"> Maybe</label>
+            <label class="sbs"><input type="radio" name="dangerLevel" value="no"> No</label>
+
+            
+            <label class="top">Additional Information:<input class="textArea" type="text" name="additionalInfo"></label>
+            </fieldset>
+
+            <div class="submit">
+            <input type="submit" name="submit" value="Report Storm" class="submitBtn">
+            </div>
+
+        </form>
+        
+    </main>
+
+    <footer>
+
+        <p>&copy; Under The Weather | Jacob H. Maughan | <span id="date"></span></p>
+    </footer>
+
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/windChill.js"></script>
+    <script src="scripts/slider.js"></script>
+
+
+</body>
+
+</html>

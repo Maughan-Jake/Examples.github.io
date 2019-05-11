@@ -1,0 +1,50 @@
+jQuery is used to select (query) HTML elements and perform "actions" on them.
+Basic syntax is: $("selector").action()
+- The $ accesses jQuery.
+- The (selector) finds HTML elements.
+- The action() is then performed on the element(s).
+
+Examples
+$("p").hide()  // hides all <p> elements
+$(".demo").hide()  // hides all elements with class="demo"
+$("#demo").hide()  // hides the element with id="demo"
+
+text() sets or returns the text content of selected elements.
+html() sets or returns the content of selected elements (including HTML markup).
+val() sets or returns the value of form fields.
+attr() sets or returns the value of attributes.
+removeAttr() removes the specified attribute.
+
+append() inserts content at the end of the selected elements.
+prepend() inserts content at the beginning of the selected elements.
+after() inserts content after the selected elements.
+before() inserts content before the selected elements.
+
+var txt = $("<p></p>").text("Hi"); - creates a new <p> element, which contains the text Hi and assigns it to a variable called txt.
+
+The addClass( ) method adds one or more classes to the selected elements.
+The removeClass() method removes one or more class names from the selected elements.
+The toggleClass() method toggles between adding/removing classes from the selected elements, 
+    meaning that if the specified class exists for the element, it is removed, and if it does not exist, it is added.
+
+To set multiple CSS properties, the css() method uses JSON syntax, which is: 
+css({"property":"value","property":"value",...});
+
+The width() and height() methods get and set the dimensions without the padding, borders and margins.
+The innerWidth() and innerHeight() methods also include the padding.
+The outerWidth() and outerHeight() methods include the padding and borders.
+Check out this image to understand how they work:
+
+Let's create a simple drop-down menu that will open upon clicking on the menu item.
+HTML:<div class="menu">
+  <div id="item">Drop-Down</div>
+  <div id="submenu">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+JS:
+$("#item").click(function() {
+  $("#submenu").slideToggle(500);
+}); 

@@ -1,0 +1,63 @@
+/* The entirety of the table */
+
+main {
+    font-family: 'Ubuntu', sans-serif;
+    width: 274px;
+    box-shadow: 10px 10px 10px #628ca6;
+    background: #bbbbbb;
+}
+
+/* Everything but thead */
+table {
+    border-spacing: 1px;
+}
+
+/* Just the table description */
+caption {
+    background: #7fb9c2;
+    font-size: 24px;
+    font-weight: 900;
+    padding: 8px;
+    margin: 1px 1px 0 1px;
+}
+
+thead tr{
+    color: #fff;
+    background: #628ca6;
+}
+
+th {
+    padding: 6px 8px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+tr {
+    background: #e7f0ed;
+}
+
+tr:nth-child(even) {
+    background: #e7ffed;
+}
+
+tfoot td{
+    background: #7fb9c2;
+    font-size: 12px;
+}
+
+.dark {
+    background: #628ca6;
+    color: #fff
+}
+
+td {
+    padding: 6px 8px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+tbody tr:nth-child(4) td:nth-child(3) {
+background-color: #628ca6;
+color: white;
+}
+

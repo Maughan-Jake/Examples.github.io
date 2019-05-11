@@ -1,0 +1,306 @@
+/* Applies to all Sizes */
+
+* {
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+    background: #e6ebe0;
+}
+
+/********************************* Header *********************************/
+header {
+    background-color: #5ca4a9;
+    font-family: 'Ubuntu', sans-serif;
+    color: #e6ebe0;
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    grid-gap: 3px;
+    height: 180px;
+    padding-right: 10px;
+}
+
+.currentWeather {
+    display: none;
+}
+
+header > img {
+    width: 80%;
+    align-self: center;
+    justify-self: center;
+}
+
+.headerText {
+    align-self: center;
+    justify-self: center;
+}
+
+.headerText h1 {
+    font-size: 2rem;
+    text-shadow: 3px 1px 1px #5ca4a9;
+    text-align: center;
+}
+
+.motto {
+    font-size: 1.1rem;
+    color: #201d23;
+    font-style: italic;
+    text-shadow: .2px .2px .2px #e6ebe0;
+    font-weight: 900;
+    text-align: center;
+}
+
+.currentWeather {
+    height: 60px; 
+    width: 150px;
+    color: #e6ebe0;
+    background-color: #5ca4a9;
+    font-size: 1.1rem;
+    box-shadow: 0px 0px 12px 2px #201d23;
+    align-self: center;
+    justify-self: center;
+}
+
+.currentWeather img {
+    width: 60px;
+    margin-top: 5px;
+    align-self: center;
+    justify-self: center;
+}
+
+.currentWeather p {
+    align-self: center;
+    justify-self: center;
+}
+
+header p {
+    text-shadow: 1px 1px 1px #6f7070;
+    font-weight: 800;
+}
+
+/* ******************************* Nav */
+.navigation {
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+.mobileNav {
+    height: 50px;
+}
+
+.sideNav {
+    display: none;
+}
+
+nav button { /* Nav Hamburger Style */
+    margin: .2rem 2%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+nav { /* includes hamburger  */
+    background-color: #333;
+}
+
+nav ul {
+    display: grid;
+    grid-gap: 1px;
+    height: 320px;
+    list-style-type: none;
+    color: #e6ebe0;
+    text-align: center;
+    align-items: center;
+    background: #201d23;
+    margin: 0;
+    padding-left: 0;
+}
+
+nav li {
+    border-top: 2px solid rgba(0, 0, 0, .3);
+    padding: 15px;
+}
+
+li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+nav ul li.active{background: rgba(150, 39, 39, .2)}
+nav ul li:hover {background: rgba(0, 0, 0, .4);}
+
+nav ul.hide {
+    display: none;
+}
+
+/********************************* Main *********************************/
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main h2 {
+    text-align: center;
+    padding: 15px;
+}
+
+.hero img {
+    width: 100%;
+}
+
+/********************************* Weather Summary *********************************/
+.weatherSummary {
+    border: 2px solid black;
+    width: 250px;
+    padding: 3px 5px 10px 5px;
+    background: #5ca4a9;
+    color: #e6ebe0;
+    opacity: .9;
+    margin: -150px 0 10px 20px;
+}
+
+.weatherDetails {
+    border-top: 1.5px solid black;
+    margin: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section h3 {
+    margin: 5px 0 2px 10px;
+}
+
+.label {
+    text-align: right;
+    width: 100px;
+    padding-right: 5px;
+    margin: 1px 1px;
+}
+
+.value {
+    text-align: left;
+    width: 100px;
+    width: 100px;
+    margin: 0 0 0 5px;
+}
+
+/***************************************- 5 Day forecast */
+.forecast {
+    display: none;
+}
+
+.forecast {
+    background: #5ca4a9;
+    border: 1.5px solid black;
+    height: 100px;
+}
+
+.forecast h3{
+    text-align: center;
+}
+
+table {
+    border: 1.5px solid black;
+    width: 90%;
+    margin: auto;
+    background: #e6ebe0;
+    color: #201d23;
+    
+}
+
+table, th, td {
+    border: 1.5px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+
+/********************************* Article *********************************/
+article {
+    border: 1px solid black;
+    background: #6f7070;
+    color: #e6ebe0;
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+}
+
+article img {
+    width: 100%;
+    margin: 10px auto 10px auto;
+    grid-column: 2 / 3;
+    box-shadow: 0px 0px 10px 1px;
+}
+article h2 {
+    padding-bottom: 2px;
+}
+
+article h2, article p {
+    width: 100%;
+    margin: 10px auto 10px auto; 
+    grid-column: 2 / 3;
+}
+.author {
+    font-style: italic;
+}
+
+/********************************* Footer *********************************/
+.bottom {
+    border: 1px solid black;
+    background: #5ca4a9;
+    display: grid;
+    grid-template-columns: 10px 1fr 10px;
+}
+
+.family {
+    grid-column: 2 / 3;
+    width: 100%;
+    margin: 10px auto 10px auto;
+}
+
+.contact-info {
+    grid-column: 2 / 3;
+    margin: 10px auto 10px auto;
+}
+
+.google-map {
+    grid-column: 2 / 3;
+    margin: 0 10px;
+}
+
+.contact-info img {
+    height: 1.5em;
+}
+.bottom .contactIcon {
+    height: 1em;
+}
+
+.socialMedia {
+    padding-bottom: 10px;
+}
+
+.google-map {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto 10px auto;
+}
+
+footer {
+    text-align: center;
+    background-color: #201d23;
+    color: #e6ebe0;
+} 
+
+footer p {
+    font-size: .9em;
+}
+
+footer a {
+    text-decoration: none;
+    color: #962727;
+}

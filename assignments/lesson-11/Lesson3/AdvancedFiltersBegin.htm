@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Filters</title>
+	<link rel="stylesheet" href="css/filters.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<script>
+	$(function(){
+		// All jQuery code goes here
+
+		$('li:first-of-type').css('background', 'green');
+		$('li:only-of-type').css('background', 'blue');
+		$('li:contains("Crush")').css('color', 'purple');
+		$('li:empty').css('background', 'purple');
+		$('li:has("h4")').css('background', 'black');
+		$('li:nth-child(3)').css('background', 'gray');
+
+	})
+	</script>
+</head>
+<body>
+<ul>
+		<li>Apples</li>
+		<li>Oranges
+			<ul>
+				<li></li>
+			</ul>
+		</li>
+		<li>Peaches</li>
+		<li>Strawberries
+			<ul>
+				<li>Jam</li>
+				<li>Crush</li>
+				<li>Cake</li>
+			</ul>
+		</li>
+		<li>Kiwi
+			<ul>
+				<li><h4>Crush</h4></li>
+			</ul>
+		</li>
+</ul>
+
+</body>
+</html>

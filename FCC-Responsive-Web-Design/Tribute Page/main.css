@@ -1,0 +1,29 @@
+body {
+    max-width: 800px;
+    min-width: 170px;
+    margin: 30px auto;
+    background: #fbfffe;
+}
+
+header, #img-div p, main h4, footer{
+    text-align: center;
+}
+
+#img-div img {
+    display: block;
+    min-width: 300px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#tribute-info li {
+    margin-top: 20px;
+}
+
+main ul {
+    background: #464246;
+    padding: 25px;
+    color: #ced1d0;
+    border-radius: 15px;
+    list-style-type: none;
+}

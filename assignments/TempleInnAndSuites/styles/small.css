@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700|Ubuntu:300,400,500');
+
+/**************************************
+General
+**************************************/
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/**************************************
+Header
+**************************************/
+header {
+    background-color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.logo {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/**************************************
+Navigation
+**************************************/
+
+.mobileNav {
+    height: 50px;
+}
+
+nav {
+    background-color: #171817;
+    display: grid;
+}
+
+nav button { /* Nav Hamburger Style */
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #fff;
+}
+
+nav ul {
+    display: grid;
+    grid-gap: 1px;
+    list-style-type: none;
+    color: #fff;
+    text-align: center;
+    align-items: center;
+    background: #1f363d;
+    margin: 0;
+    padding-left: 0;
+}
+
+nav li {
+    border-top: 2px solid rgba(0, 0, 0, .3);
+    padding: 15px;
+}
+
+li a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul li:hover {background: rgba(0, 0, 0, .4);}
+nav ul li.active{background: #94c5cc}
+
+
+nav ul.hide {
+    display: none;
+}
+
+/**************************************
+Main
+**************************************/
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/********** Hero **********/
+.hero {
+    text-align: center;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    top: 1%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px #171817;
+}
+
+.motto {
+    position: absolute;
+    left: 0;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 5px #1f363d;
+
+}
+
+.description {
+    position: absolute;
+    right: .5em;
+    bottom: 4em;
+    color: #fff;
+    padding: 2px;
+    background: rgba(31,54,61,.7);
+    text-shadow: 0px 0px 5px #1f363d;
+    margin: 0;
+}
+
+.hero a {
+    text-decoration: none;
+}
+
+.reservationButton {
+    background: #94c5cc;
+    color: #fff;
+    width: 80%;
+    margin: 10px auto;
+    border: 2px solid #171817;
+    border-radius: 5px 5px 5px 5px;
+    list-style-type: none;
+}
+
+/********** Temple Description **********/
+.templeDescription {
+    border: 2px solid #1f363d;
+    margin: 4px 2px;
+    padding: 2px 10px;
+    background: #b4d2e7;
+}
+
+.templeDescription h2 {
+    text-align: center;
+    color: #1f363d;
+}
+
+/********** Gallery **********/
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+}
+
+.gallery h2 {
+    text-align: center;
+}
+.gallery  img{
+    width: 100%;
+}
+
+/********************************* 
+Footer 
+*********************************/
+footer {
+    text-align: center;
+    background-color: #201d23;
+    color: #e6ebe0;
+} 
+
+.contactUs {
+    font-size: 1.2em
+}
+
+footer p {
+    font-size: .9em;
+    margin: 0;
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #94c5cc;
+}
+
+/********************************* Temples *********************************/
+
+/* Accordian CSS */
+
+.templeAccordian .dt {
+    background: #94c5cc;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid #171817;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.templeAccordian .dt a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.templeAccordian img {
+    width: 100%;
+}
+
+.templeAccordian h4, .templeAccordian p, .templeAccordian li {
+    padding: 0 15px;
+}
+
+.templeAccordian h4 {
+    margin-bottom: 0px;
+}
+
+.templeAccordian h4, .templeAccordian .center{
+    text-align: center;
+}
+
+.templeAccordian article{
+    text-align: left;
+}
+
+/* Temple CSS */
+.services {
+    display: block;
+    margin: 0 auto 20px;
+    width: 245px;
+}
+
+.history, .closure {
+    background: #94c5cc;
+    padding: 10px 0 20px 0;
+    border-radius: 10px;
+}
+
+.gridContainer1, .gridContainer2, .gridContainer3 {
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/********************************* Reservations *********************************/
+.forms {
+    text-align: center;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+form fieldset {
+    margin: 1rem;
+    border: 1px solid #1f363d;
+    border-radius: 10px;
+    padding: .5rem;
+}
+
+form legend {
+    color: #94c5cc;
+    margin: auto;
+    padding: 0 .5rem;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+form label.top, form div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    color: #201d23;
+}
+
+form label.top input, form label.top select {
+    display: flex;
+    font-size: 1rem;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: .75rem;
+    color: #555;
+    width: 90%;
+    max-width: 20rem;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+form label.sbs {
+    display: flex;
+    padding: .75rem 0;
+    color: #555;
+}
+
+form input.submitBtn {
+    border: none;
+    background: #962727;
+    color: white;
+    border-radius: 5px;
+    padding: .75rem 1.5rem;
+    width: 84%;
+    max-width: 20rem;
+}
+
+form label.top input:required {
+    border-left: 5px solid #5ca4a9;
+}
+
+.textArea {
+    height: 80px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+/********************************* Thanks *********************************/
+.thanks {
+    text-align: center;
+}
+
+.thanksContainer {
+    padding: 40px
+}
+
+/********************************* Service *********************************/
+
+.hotelImgs {
+    display: grid;
+}
+
+.food, .reception {
+    display: none;
+}
+
+.hotelImg {
+    width: 100%;
+}
+
+.servicePage {
+    padding: 20px;
+}
+
+.servicePage h2 {
+    margin: 0;
+}
+
+.amenities, .receptionServices {
+    background: #94c5cc;
+    padding: 15px 25px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.specialServices, .fullTimeM {
+    border: 1px solid #1f363d;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/********************************* Contact *********************************/
+/* Contact Info */
+.contact h1 {
+    text-align: center;
+    color: #5ca4a9;
+    margin-bottom: 0;
+}
+.contactInfo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,40px 75px); 
+    text-align: center;
+}
+
+/* Form */
+.contact fieldset{
+   margin: 0 .5em;;
+}
+
+/* Embedded Google Map */
+.mapouter {
+    text-align: right;
+    height: 200px;
+    width: 350px;
+    margin: 20px auto;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 200px;
+    width: 350px;
+}
+
+#gmap_canvas {
+    width: 750px;
+    height: 375px;
+    border: none;
+    margin: 0;
+}

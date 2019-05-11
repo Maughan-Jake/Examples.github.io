@@ -1,0 +1,63 @@
+{
+    "temples": [
+        {
+            "name": "Logan Utah",
+            "closures": [
+                "Tuesday, January 1, 2019",
+                "Monday, February 11, 2019 - Monday, February 25, 2019",
+                "Saturday, April 6, 2019",
+                "Thursday, July 4, 2019",
+                "Monday, July 22, 2019 - Monday, August 5, 2019",
+                "Saturday, October 5, 2019",
+                "Wednesday, November 27, 2019 (Limited Hours)",
+                "Thursday, November 28, 2019",
+                "Tuesday, December 24, 2019",
+                "Wednesday, December 25, 2019",
+                "Tuesday, December 31, 2019 (Limited Hours)"
+            ]
+        },
+        {
+            "name": "San Diego California",
+            "closures": [
+                "Tuesday, January 1, 2019",
+                "Monday, March 18, 2019 - Monday, April 1, 2019",
+                "Saturday, April 6, 2019",
+                "Thursday, July 4, 2019",
+                "Monday, September 30, 2019 - Monday, November 11, 2019",
+                "Wednesday, November 27, 2019 - Thursday, November 28, 2019",
+                "Tuesday, December 24, 2019 - Wednesday, December 25, 2019",
+                "Tuesday, December 31, 2019"
+            ]
+        },
+        {
+            "name": "Bountiful Utah",
+            "closures": [
+                "Tuesday, January 1, 2019",
+                "Monday, February 11, 2019 - Monday, February 25, 2019",
+                "Saturday, April 6, 2019",
+                "Thursday, July 4, 2019",
+                "Monday, July 22, 2019 - Monday, August 5, 2019",
+                "Saturday, October 5, 2019",
+                "Wednesday, November 27, 2019 (Limited Hours)",
+                "Thursday, November 28, 2019",
+                "Tuesday, December 24, 2019",
+                "Wednesday, December 25, 2019",
+                "Tuesday, December 31, 2019"
+            ]
+        },
+        {
+            "name": "Philadelphia Pennsylvania",
+            "closures": [
+                "Tuesday, January 1, 2019",
+                "Monday, March 18, 2019 - Monday, April 1, 2019",
+                "Saturday, April 6, 2019",
+                "Thursday, July 4, 2019",
+                "Monday, September 16, 2019 - Monday, September 30, 2019",
+                "Saturday, October 5, 2019",
+                "Wednesday, November 27, 2019 - Thursday, November 28, 2019",
+                "Tuesday, December 24, 2019 - Wednesday, December 25, 2019",
+                "Tuesday, December 31, 2019"
+            ]
+        }
+    ]
+}

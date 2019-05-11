@@ -1,0 +1,211 @@
+@media only screen and (min-width: 64rem) {
+
+    main, footer {
+        width: 80%;
+        margin: auto;
+    }
+
+    header  {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-gap: 35px;
+    }
+
+    .headerText h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        align-self: center;
+        justify-self: end;
+    }
+
+    .currentWeather {
+        align-self: center;
+        justify-self: start;
+    }
+
+
+    /* *************************************** Nav */
+    .navigation {
+        display: grid; 
+        height: 50px;
+        padding: 0;
+        width: 100%;
+        margin: 0;
+    }
+
+    .mainNav {
+        display: grid; 
+        grid-template-columns: 1fr repeat(6, auto) 1fr;
+        height: 50px;
+        margin: 0;
+        padding: 5px;
+    }
+
+    nav li {
+        border: 0;
+        padding: 12px
+    }
+
+    nav ul.hide {
+        display: inline-grid;
+        padding: 0;
+    }
+
+    .firstli {
+        grid-column: 2/3;
+    }
+
+    .mobileNav {
+        display: none; 
+    }
+
+    .sideNav {
+        display: none;
+    }
+
+    
+
+    /* *************************************** Main*/
+    main {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    
+    main > h2 {
+        text-align: center;
+        margin: 15px 0px;
+        grid-column: 1/3;
+    }
+
+    .hero {
+        grid-column: 1/3;
+    }
+
+    .hero > img {
+        max-width: 100%;
+        border: 1.5px solid black;
+        height: auto;
+    }
+
+    /* Weather summary box */
+    .weatherSummary {
+    top: -350px;
+    left: 20px;
+    }
+
+    .weatherDetails {
+        margin: 0 10px 0 10px;
+    }
+
+    /***************************************- 5 Day forecast */
+    .forecast {
+        background: #5ca4a9;
+        border: 1.5px solid black;
+        padding-bottom: 10px;
+        grid-column: 1/3;
+    }
+    
+    .forecast h3{
+        text-align: center;
+    }
+
+    table {
+        border: 1.5px solid black;
+        width: 90%;
+        background: #e6ebe0;
+        color: #201d23;
+    }
+
+    table, th, td {
+        border: 1.5px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    /* *************************************** Article */
+
+    article {
+        padding: 0 15px;
+        grid-template-columns: 2fr 1.5fr; 
+        grid-column-gap: 15px;
+    }
+
+    .articleTitle {
+        grid-row: 1/3;
+        align-self: center;
+        justify-self: center;
+    } 
+
+    .author {
+        margin-left: 1rem;
+        text-align: center;
+    }
+
+    .firstui {
+        grid-column: 1/2;
+    }
+
+    article img {
+        box-shadow: 0 0 5px 2px;
+        width: 100%;
+        grid-row: 1/5;
+    }
+
+    /* *************************************** Bottom*/
+    .family {
+        display: inline-grid;
+        grid-column: 1/2;
+        padding-left: 10px;
+    }
+    
+    .bottom .family {
+        width: 300px;
+        height: 230px;
+        min-width: 70%;
+    }
+    
+    .bottom {
+        margin-top: 5px;
+        width: auto;
+        height: auto;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 1fr 1fr 2fr;
+        justify-items: center;
+    }
+
+    .bottom p {
+        margin: .3rem 0 .3em .3rem;
+    }
+
+    .socialMedia {
+        margin-top: 1rem;
+    }
+
+    .google-map {
+    position: relative;
+    padding-bottom: 20%;
+    height: 20%;
+    overflow: hidden;
+    border: 1.5px solid black;
+    width: 90%;
+    height: 200px;
+    margin: auto 0 auto 10px;
+    grid-column: 3/4;
+    }
+
+    .google-map iframe {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+    
+    footer {
+        background: #201d23;
+        padding: 10px;
+    }
+}

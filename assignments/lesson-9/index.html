@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Under The Weather | Home</title>
+    <meta name="description" content="The town of Preston | Prestons go to home for weather and weekly forecasts ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/small-7.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/medium-7.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/large-7.css" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text%7CUbuntu" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/Umbrella.svg" alt="Logo">
+
+        <div class="headerText">
+            <h1 class="title">Under The Weather</h1>
+            <div class="motto">Keeping Your Family On The Bright Side </div>
+        </div>
+
+        <div class="currentWeather">
+            <img id="sunny" src="images/Sun.svg" alt="weather condition">
+            <p>Sunny</p>
+        </div>
+    </header>
+
+    <nav class="clearfix">
+        <button class="mobileNav" onclick="toggleMenu()">&#8801;</button>
+        <ul id="primaryNav" class="mainNav hide">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main class="cityContainer">
+        <div class="Franklin">
+            <h3 id="franklinName"></h3>
+            <h4 id="franklinMotto"></h4>
+            <p>Year Founded: <span id="franklinFound"></span></p>
+            <p>Population: <span id="franklinPop"></span></p>
+            <p>Annual Rain Fall: <span id="franklinRain"></span></p>
+            <img src="images/gallery/smallFlowers.jpeg" alt="">
+        </div>
+
+        <div class="Greenville">
+            <h3 id="greenvilleName"></h3>
+            <h4 id="greenvilleMotto"></h4>
+            <p>Year Founded: <span id="greenvilleFound"></span></p>
+            <p>Population: <span id="greenvillePop"></span></p>
+            <p>Annual Rain Fall: <span id="greenvilleRain"></span></p>
+            <img src="images/gallery/smallLake.jpeg" alt="">
+        </div>
+
+        <div class="Springfield">
+            <h3 id="springfieldName"></h3>
+            <h4 id="springfieldMotto"></h4>
+            <p>Year Founded: <span id="springfieldFound"></span></p>
+            <p>Population: <span id="springfieldPop"></span></p>
+            <p>Annual Rain Fall: <span id="springfieldRain"></span></p>
+            <img src="images/gallery/smallMountains.jpeg" alt="">
+        </div>
+
+    </main>
+
+    <footer>
+    
+        <p>&copy; Under The Weather | Icons made by <a href="https://www.flaticon.com/authors/freepik"> FreePik</a>
+            from www.flaticon.com | Images by <a href="https://www.pexels.com/">Pexels</a>
+            from www.pexels.com | Jacob H. Maughan | <span id="date"></span></p>
+    </footer>
+    
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/windChill.js"></script>
+    <script src="scripts/homeScript.js"></script>
+    
+    </body>
+    
+    </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Preston Weather</title>
+    <meta name="description" content="Storm Center | Report a Storm or Unusual Weather">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/small.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/medium.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/large.css" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text%7CUbuntu" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/Umbrella.svg" alt="Logo">
+
+        <div class="headerText">
+            <h1 class="title">Under The Weather</h1>
+            <div class="motto">Keeping Your Family On The Bright Side </div>
+        </div>
+
+        <div class="currentWeather">
+            <img id="sunny" src="images/Sun.svg" alt="weather condition">
+            <p>Sunny</p>
+        </div>
+    </header>
+
+    <nav class="clearfix">
+        <button class="mobileNav" onclick="toggleMenu()">&#8801;</button>
+        <ul id="primaryNav" class="mainNav hide">
+            <li><a href="#">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="#">Soda Springs</a></li>
+            <li><a href="#">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2 class="thanks">Thank you for submitting your storm <br> Our storm center has been notified</h2>
+    </main>
+
+    <footer>
+
+        <p>&copy; Under The Weather | Jacob H. Maughan | <span id="date"></span></p>
+    </footer>
+
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/windChill.js"></script>
+    <script src="scripts/slider.js"></script>
+
+
+</body>
+
+</html>

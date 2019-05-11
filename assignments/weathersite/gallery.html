@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gallery</title>
+    <meta name="description" content="The Gallery | Pictures of storms, sunsets, and beautiful winters">
+    <meta name="keywords" content="local weather, preston, soda springs, fish haven, idaho, weather, under the weather">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/small.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/medium.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/large.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/gallery-small.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/gallery-medium.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/gallery-large.css" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text%7CUbuntu" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/Umbrella.svg" alt="Logo">
+
+        <div class="headerText">
+            <h1 class="title">Under The Weather</h1>
+            <div class="motto">Keeping Your Family On The Bright Side </div>
+        </div>
+    </header>
+
+    <nav class="clearfix">
+        <button class="mobileNav" onclick="toggleMenu()">&#8801;</button>
+        <ul id="primaryNav" class="mainNav hide">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="sodasprings.html">Soda Springs</a></li>
+            <li><a href="fishhaven.html">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li class="active"><a href="#">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <figure>
+            <img class="img1" src="images/gallery/cloudy-road.jpeg" alt="A storm rolls over the road">
+            <figcaption>A storm rolls over the road</figcaption>
+        </figure>
+        <figure>
+            <img class="img2" src="images/gallery/cloudy.jpeg" alt="looming clouds over the mountains">
+            <figcaption>looming clouds over the mountains</figcaption>
+        </figure>
+        <figure>
+            <img class="img3" src="images/gallery/lightning.png" alt="lightning bolt over plains">
+            <figcaption>lightning bolt over plains</figcaption>
+        </figure>
+        <figure>
+            <img class="img4" src="images/gallery/rainbow.jpeg" alt="rainbow ovver green fields">
+            <figcaption>rainbow ovver green fields</figcaption>
+        </figure>
+        <figure>
+            <img class="img5" src="images/gallery/snow-sunrise.jpeg" alt="sunrise over snowcapped hills">
+            <figcaption>sunrise over snowcapped hills</figcaption>
+        </figure>
+        <figure>
+            <img class="img6" src="images/gallery/snowy-road.jpeg" alt="A frosty winter road">
+            <figcaption>A frosty winter road</figcaption>
+        </figure>
+    </div>
+  
+    <footer>
+        <p>&copy; Under The Weather | Images by <a href="https://www.pexels.com/">Pexels</a>
+        from www.pexels.com| Jacob H. Maughan | <span id="date"></span></p>
+    </footer>
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+
+</body>

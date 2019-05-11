@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Filters</title>
+	<link rel="stylesheet" href="css/filters.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<script>
+	$(function(){
+		// All jQuery code goes here
+		$('li:first').css('background', 'red');
+		$('li:last').css('background', 'red');
+		$('li:even').css('background', 'blue');
+		$('li:odd').css('background', 'green');
+		$('li:eq(3)').css('background', 'brown');
+
+	})
+	</script>
+</head>
+<body>
+<ul>
+		<li>Apples</li>
+		<li>Oranges</li>
+		<li>Peaches</li>
+		<li>Strawberries</li>
+		<li>Kiwi</li>
+</ul>
+
+</body>
+</html>

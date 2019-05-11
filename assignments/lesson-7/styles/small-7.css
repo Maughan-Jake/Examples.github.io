@@ -1,0 +1,337 @@
+/* Applies to all Sizes */
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+    background: #e6ebe0;
+}
+
+/********************************* All Header *********************************/
+header {
+    background-color: #5ca4a9;
+    font-family: 'Ubuntu', sans-serif;
+    color: #e6ebe0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header > img {
+    width: 6em;
+    vertical-align: middle;
+    margin-right: 1em;
+    margin-left: 2em;
+}
+
+.headerText {
+    vertical-align: middle;
+    padding:0 2em;
+    margin-bottom: 1em;
+}
+
+.headerText h1 {
+    font-size: 3rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    text-shadow: 3px 1px 1px #5ca4a9;
+}
+
+.motto {
+    font-size: 1.1rem;
+    color: #201d23;
+    font-style: italic;
+    padding-top: .5em;
+    margin: 0 0 5px 0;
+    text-shadow: .2px .2px .2px #e6ebe0;
+    font-weight: 900;
+}
+
+.currentWeather {
+    margin: 2em 0 1em 5em;
+    padding: .75em;
+    margin: 1.5em 0em 2em 2em;
+    vertical-align: middle;
+    color: #e6ebe0;
+    background-color: #5ca4a9;
+    font-size: 1.1rem;
+    box-shadow: 0px 0px 12px 2px #201d23;
+    display: flex;
+}
+
+.currentWeather img {
+    width: 60px;
+    vertical-align: middle;
+    padding-right: 0;
+}
+
+header p {
+    margin: .5em .5em .5em .5em;
+    padding: .5em .5em .5em 0;
+    text-shadow: 1px 1px 1px #6f7070;
+    font-weight: 800;
+}
+
+/* ******************************* Nav */
+
+nav ul { /* This is for the large Nav */
+        list-style-type: none;
+        margin: auto;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        color: #e6ebe0;
+        text-align: center;
+        background: #201d23;
+    }
+
+li a {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+/********************************* All Weather Sumary *********************************/
+.weatherSummary {
+    border: 2px solid black;
+    width: 250px;
+    padding: 3px 5px 10px 5px;
+    background: #5ca4a9;
+    color: #e6ebe0;
+    position: relative;
+    opacity: .9;
+}
+
+.weatherDetails {
+    border-top: 1.5px solid black;
+    margin: 0 10px 0 10px;
+}
+
+section h3 {
+    margin: 5px 0 2px 10px;
+}
+
+.label {
+    text-align: right;
+    display: inline-block;
+    width: 100px;
+    padding-right: 5px;
+    margin: 1px 1px;
+}
+
+.value {
+    text-align: left;
+    display: inline-block;
+    width: 100px;
+    margin: 0 0 0 5px;
+}
+
+.hero {
+    margin-bottom: -150px;
+}
+
+/********************************* Article *********************************/
+article {
+    border: 1px solid black;
+    background: #6f7070;
+    color: #e6ebe0;
+}
+.author {
+    font-style: italic;
+    margin-top: 1px;
+}
+
+/********************************* Footer *********************************/
+.bottom {
+    border: 1px solid black;
+    background: #5ca4a9;
+}
+.bottom img {
+    display: inline-block;
+    height: 1.5em;
+    width: 1.5em;
+}
+.bottom .contactIcon {
+    height: 1em;
+    width: 1em;
+}
+
+.socialMedia {
+    padding-bottom: 10px;
+}
+
+    footer {
+        text-align: center;
+        background-color: #201d23;
+        color: #e6ebe0;
+        padding: 10px;
+    } 
+
+    footer p {
+        margin: 0;
+        font-size: .9em;
+    }
+
+    footer a {
+        text-decoration: none;
+        color: #962727;
+    }
+
+    /********************************* ClearFix */
+    .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+@media screen and (max-width: 64rem) {
+
+    /******************************** Small Header ****************************/
+    .logo {
+        min-width: 4em;
+        margin: 0 5px 0 15px;
+    }
+
+    .headerText {
+        padding: 0 0 0 1em;
+        padding-left: 0px;
+    }
+    .headerText h1 {
+        font-size: 1.5em;
+    }
+
+    .title{
+        font-size: 1em;
+        margin-left: 0;
+        margin-right: 2px;
+    }
+
+    .motto {
+        margin-bottom: 15px;
+        margin-right: 25px;
+        text-align: center;
+    }
+    
+    .currentWeather {
+        display: none;
+    }
+
+    /********************************-SMALL- Nav ********************************/
+    .mobileNav {
+        display: flex;
+        margin: auto;
+        padding: 10px;
+    }
+
+    nav button { /* Nav Hamburger Style */
+        margin: .2rem 2%;
+        background-color: transparent;
+        border: none;
+        font-size: 1.6rem;
+        color: #fff;
+    }
+
+    nav { /* includes hamburger  */
+        background-color: #333;
+    }
+
+    nav ul li a {
+        padding: .8rem 2%;
+        border-top: 2px solid rgba(0, 0, 0, .3)
+    }
+
+    nav ul li.active a{background: rgba(150, 39, 39, .2)}
+    nav ul li a:hover {background: rgba(0, 0, 0, .4);}
+    
+    nav ul.hide {
+        display: none;
+    }
+
+
+    /********************************-SMALL- Hero ********************************/
+    main img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 70%;
+    }
+
+    .weatherSummary {
+        top: -150px;
+        left: 20px;
+    }
+
+    /********************************-SMALL- Main ********************************/
+    h2 {
+        text-align: center;
+        margin: 15px 0px;
+    }
+
+    .forecast {
+        display: none;
+    }
+
+    article {
+        margin: 5px;
+        padding: 10px 12px 5px ;
+    }
+
+    article h2 {
+        margin: 0;
+        text-align: left;
+    }
+
+    article img {
+        box-shadow: 0px 0px 10px 1px;
+    }
+
+    /********************************-SMALL- bottom section **********************/
+    .bottom .family {
+        display: none;
+    }
+
+    .google-map {
+        position: relative;
+        padding-bottom: 40%;
+        height: 0;
+        overflow: hidden;
+        border: 1px solid black;
+        width: 300px;
+        margin: 10px auto;
+    }
+    .google-map iframe {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contact-info {
+        padding: 1px 10px;
+    }
+    section h4 {
+        margin: 10px 0 0 0;
+    }
+    .add1, .add2, .tel, .email {
+        padding: 0;
+        margin: 0 3px 0 0px;
+    }
+
+    .add2 {
+        margin-bottom: 15px;
+        margin-left: 0;
+    }
+
+    .email {
+        margin-bottom: 15px;
+    }
+}

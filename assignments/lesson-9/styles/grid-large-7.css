@@ -1,0 +1,18 @@
+@media only screen and (min-width: 64em) {
+
+    footer {
+        width: 100%;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .container figure {
+    margin: 5px 5px 30px;
+    }
+    
+    figure:hover {
+    box-shadow: 2px 2px 5px #000;
+    text-shadow: 2px 2px 5px #000;
+    }
+}
