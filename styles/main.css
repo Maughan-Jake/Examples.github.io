@@ -8,34 +8,20 @@ body {
 }
 
 h1 {
-    font-size: 1.5rem;
-    color: #fdfdfd;
+    font-size: 2rem;
+    padding: 5px;
+    color: #3394d4;
+    margin: 0;
 }
 
-h2 {
-    font-size: 1.5rem;
-    text-align: center;
-    border-bottom: 1px solid #bbb;
+#description {
+    padding-left: 5px;
+    font-style: italic;
+    margin-bottom: 50px;
 }
 
 header, main, footer {
     margin: 1.25rem auto;
     padding: .5rem;
     max-width: 50%;
-}
-
-header, footer, footer a {
-    text-align: center;
-    background-color: #362e2e;
-    color: whitesmoke;
-}
-
-header img {
-    width: 125px;
-    height: auto;
-    float: right;
-}
-
-footer {
-    font-size:smaller;
 }

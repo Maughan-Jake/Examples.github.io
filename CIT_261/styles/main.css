@@ -1,0 +1,43 @@
+* { margin: 0; box-sizing: border-box; } 
+
+body { 
+    font-size: 16px; 
+    line-height: 32px;
+    font-family:Ubuntu, sans-serif ;
+    color:#48747e;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 5px;
+    color: #3394d4;
+    margin: 0;
+}
+
+header, main {
+    margin: 1.25rem auto;
+    padding: 1rem;
+}
+
+table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  table tr:nth-child(even){background-color: #f2f2f2;}
+  
+  table tr:hover {background-color: #ddd;}
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2f8d9e;
+    color: white;
+  }
