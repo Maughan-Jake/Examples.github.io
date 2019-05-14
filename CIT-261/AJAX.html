@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta name="Robots" content="Follow, Index" />
+    <meta name="Distribution" content="Worldwide" />
+    <meta name="Rating" content="General" />
+
+    <meta name="DESCRIPTION" content="Proficiency with the Code Topics Page BYU-Idaho CIT 261 Class" />
+    <meta name="KEYWORDS" content="CIT 261, BYU-Idaho, Home Page" />
+    <meta name="Author" content="Jake Maughan" />
+    <meta name="School" content="BYU-Idaho" />
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="scripts/main.js" async defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Jake Maughan</h1>
+            <h2>CIT 261 - JSON Parse, Stringify and AJAX requests</h2>
+        </header>
+
+        <main>
+            <h3>Here is an example of using AJAX with an API</h3>
+
+            <p>The current temperature in Preston Idaho is : <span id="current-temp"></span></p>
+            <p>The temperature is obtained from a Weather API that displays weather data from around the united states.</p><br>
+
+            <h3>Click one of the buttons below to parse simple files through AJAX</h3>
+            <label for="getTxt"><button id="getTxt">Grab a .txt file</button></label>
+            <label for="getJSON"><button id="getJSON">Grab a simple JSON file</button></label><br>
+
+            <div id="content"></div>
+
+            <h3>To see the same JSON file in a string just open your console!</h3>
+
+        </main>
+
+        <script>
+            // standard JSON stringify
+            var obj = {
+                "name":"Jake",
+                "occupation":"Software Engineer",
+                "location":"Maryland",
+                "number of children": 1,
+                "favorite hobby":"riding dirt bikes"
+            }
+
+            var myJSON = JSON.stringify(obj);
+            console.log(obj);
+
+            // stringify with select key:value pairs selected and seperated with a tab
+            var objSpecified = new Array();
+            objSpecified[0] = "name";
+            objSpecified[1] = "location";
+
+            var jsonText = JSON.stringify(obj, objSpecified,"\t");
+            console.log(jsonText);
+        </script>
+
+    </body>
+</html>
