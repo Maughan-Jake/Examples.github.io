@@ -50,6 +50,14 @@ window.onload = function() {
     weatherRequest.onload = function () {
         var weatherData = JSON.parse(weatherRequest.responseText);
         var temp = weatherData.main.temp;
+        var weatherMain = weatherData['weather'][0]['main'];
+        var humidity = weatherData.main.humidity;
+        var windSpeed = weatherData.wind.speed;
+        var icon = weatherData['weather'][0]['icon'];
+    
         document.getElementById("current-temp").innerHTML = temp;
+        document.getElementById("weatherMain").innerHTML = weatherMain;
+        document.getElementById("humidity").innerHTML = humidity;
+        document.getElementById("windSpeed").innerHTML = windSpeed;
     }
 };
