@@ -25,19 +25,27 @@ table {
     width: 100%;
   }
   
-  table td, table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
   
-  table tr:nth-child(even){background-color: #f2f2f2;}
+table tr:nth-child(even){background-color: #f2f2f2;}
   
-  table tr:hover {background-color: #ddd;}
+table tr:hover {background-color: #ddd;}
   
-  table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #2f8d9e;
-    color: white;
-  }
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2f8d9e;
+  color: white;
+}
+
+#jsonExample {
+  background: #444343;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+}

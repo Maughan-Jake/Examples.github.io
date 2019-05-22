@@ -13,19 +13,107 @@
     <meta name="KEYWORDS" content="CIT 261, BYU-Idaho, Home Page" />
     <meta name="Author" content="Jake Maughan" />
     <meta name="School" content="BYU-Idaho" />
-        <link rel="stylesheet" href="styles/main.css">
-        <script src="scripts/main.js" async defer></script>
+    <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
         <header>
             <h1>Jake Maughan</h1>
-            <h2>CIT 261 - </h2>
+            <h2>CIT 261 - Local Storage</h2>
             <a href="index.html">Home</a>
         </header>
 
         <main>
+            <h3>To see local storage in action Open your dev tools -> click the storage tab<br> -> select local storage -> watch the magic happen!</h3><br>
+            <label for="key1">Please enter a key to store an array in: <input type="text" id="arrKey"></label><br>
+            <label for="arr1">Please enter a comma seperated list to put into an array in memory: <input type="text" id="arr1"></label><br>
+            <button onclick="storeArray()">Store comma seperated array</button><br><br>
 
+            <label for="key2">Please enter another key to store a JSON string in: <input type="text" id="jsonKey"></label><br>
+            <label for="jsonObject">Please enter a JSON string to to place in local memory: <input type="text" id="jsonObject"></label><br>
+            <p id="jsonExample">Here is a sample JSON string: <br>{"array":[1,2,3],"boolean":true,"color":"#82b92c","null":null,"number":123,"object":{"a":"b","c":"d","e":"f"},"string":"Hello World\n"}</p>
+            <button onclick="storeJSON()">Store JSON string</button><br>
+
+            <button onclick="displayStorage()">Display Local Storage</button>
+            <button onclick="clearStorage()">Clear Local & Session Storage</button>
+
+            <div id="results"></div>
         </main>
-        <footer></footer>
+        <script>
+            function storeArray() {
+                //Get the values from the form
+                var key = document.getElementById("arrKey").value;
+                var arr1 = document.getElementById("arr1").value;
+                var resultOutput = "";
+
+                //Verify that a key was entered
+                if (key.length > 0) {
+                    //Verify a comma seperated list was entered and split() it into an array
+                    if (arr1.includes(",")) {
+                        var array = arr1.split(",");
+
+                        // Store the key:value pair into local and session storage. 
+                        // Session storage is deleted once the browser closes
+                        localStorage.setItem(key, array);
+                        sessionStorage.setItem(key, array);
+                        resultOutput = "The key and array have been stored"
+                    } else {
+                        resultOutput = "The comma seperated array is required"
+                    }
+                } else {
+                    resultOutput = "The key is required";
+                }
+                document.getElementById("results").innerHTML = resultOutput;
+            }
+
+            function storeJSON() {
+                // Get the values from the form
+                var key = document.getElementById("jsonKey").value;
+                var jsonString = document.getElementById("jsonObject").value;
+                var resultOutput = "";
+
+                // Verify that the key was entered in correctly
+                if (key.length > 0) {
+                    
+                    try {
+                        // Parse the JSON string
+                        jsonToObj = JSON.parse(jsonString);
+
+                        // Store the JSON object in local storage. It must be a string to store in LS
+                        localStorage.setItem(key, JSON.stringify(jsonToObj));
+                        sessionStorage.setItem(key, JSON.stringify(jsonToObj));
+
+                        resultOutput = "The JSON object has been stored";
+
+                    // Verify that the JSON object was entered correctly
+                    } catch (error) {
+                        resultOutput = "The JSON string was entered incorrectly. Please try again"
+                    }
+                } else {
+                    resultOutput = "The key is required";
+                }
+                document.getElementById("results").innerHTML = resultOutput;
+            }
+
+            function displayStorage() {
+                var resultOutput = "";
+
+                // loop through all the items in storage and display them to the user
+                for (let i = 0; i < localStorage.length; i++) {
+                    resultOutput += `<p>The key "${localStorage.key(i)}" holds the value of: <br>${localStorage.getItem(localStorage.key(i))} </p><br>`;
+                }
+                document.getElementById("results").innerHTML = resultOutput;
+            }
+
+            function clearStorage() {
+                localStorage.clear();
+                sessionStorage.clear();
+            }
+
+            // //Stores a key:value pair with an associative array in local storage
+            var aArray = {"One": "is the loneliest number", "two": "can be as lonely as one", "three": 3};
+            localStorage.setItem('Numbers', JSON.stringify(aArray));
+            console.log(JSON.parse(localStorage.getItem('Numbers')));
+
+        </script>
     </body>
 </html>
