@@ -14,18 +14,42 @@
     <meta name="Author" content="Jake Maughan" />
     <meta name="School" content="BYU-Idaho" />
         <link rel="stylesheet" href="styles/main.css">
-        <script src="scripts/main.js" async defer></script>
     </head>
     <body>
         <header>
             <h1>Jake Maughan</h1>
-            <h2>CIT 261 - </h2>
+            <h2>CIT 261 - DOM Manipulation</h2>
             <a href="index.html">Home</a>
         </header>
 
         <main>
 
         </main>
-        <footer></footer>
+        <script>
+            // Create a Paragraph tag
+            var paragraph = document.createElement('P');
+            // Add text to the paragraph
+            paragraph.textContent = 'Yea, thats right. I was created with DOM Manipulation! Move your mouse under me to see some magic happen!';
+            paragraph.style.margin = '0 10px';
+            // Add text to the body
+            document.body.appendChild(paragraph);
+
+            // Create DIV Element
+            var div = document.createElement('DIV');
+            // Set styles of div element
+            div.style.height = '300px';
+            div.style.width = '95%';
+            div.style.margin = ' 20px 20px';
+            // Append Element to DOM
+            document.body.appendChild(div);
+            // Add Event Listener to Element
+            div.addEventListener('mousemove', function(event) {
+                var x = event.clientX - 20;
+                var y = event.clientY - 282;
+                div.textContent = x + ', ' + y;
+                div.style.backgroundColor = 'rgb(' + x + ', ' + y + ', 100)';
+            })
+            
+        </script>
     </body>
 </html>
