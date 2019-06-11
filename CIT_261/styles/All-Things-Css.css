@@ -1,0 +1,277 @@
+body {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23084e5d' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23275507'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    /* background by SVGBackgrounds.com */
+    }
+    
+
+#output {
+    position: relative;
+    height: 255px;
+    background-color: #333;;
+    padding: 0;
+}
+
+#default-example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+#example-element {
+    height: 40px;
+}
+
+.translate {
+    transform: translate(12px, 50%);
+}
+
+/* creating transitions directly in CSS */
+.button {
+    background-color: #fff;
+    transition: background-color 0.5s ease-out;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+.button:hover {
+background-color: #1ce;
+}
+
+.button.is-active {
+    color: red;
+}
+
+/***************************************************************** Transition effects */
+.container {
+    margin: 100px;
+}
+
+  /* create the circles */
+.circle, 
+.circle0, 
+.circle1, 
+.circle2, 
+.circle3, 
+.circle4, 
+.circle5 {
+border-radius: 50%; 
+height: 80px;
+width: 80px;
+margin: 10px;
+text-align: center;
+}
+
+/* defines the distance that the circles will travel horizontally */
+.container:hover .circle, 
+.container:hover .circle0, 
+.container:hover .circle1, 
+.container:hover .circle2, 
+.container:hover .circle3, 
+.container:hover .circle4, 
+.container:hover .circle5 {
+transform: translateX(750px);
+}
+
+/* 
+* Shorthand for transitions
+*     div {
+*         transition: [property] [duration] [timing-function] [delay];
+*         }
+* property - specifies where the transition will be applied (you can make a transition to an individual property like the background-color OR all)
+* duration - specifies the time span of the transition (seconds or milliseconds)
+* timing (optional) - defines the speed of the transition over the duration (linear, ease, ease-in, ease-out, and ease-in-out)
+* cubic-bezier is a custom timing see https://cubic-bezier.com
+*/
+.circle0 {
+background: PaleTurquoise;
+transition: all 2s linear;
+}
+.circle1 {
+background: salmon;
+transition: all 2s ease;
+}
+.circle2 {
+background: lightskyblue;
+transition: all 2s ease-in;
+}
+.circle3 {
+background: khaki;
+transition: all 2s ease-out;
+}
+.circle4 {
+background: mediumturquoise;
+transition: all 2s ease-in-out;
+}
+.circle5 {
+background: thistle;
+transition: all 2s cubic-bezier(1, .22, .19, .1);
+}
+
+/***************************************************************** Animations */
+
+/******************* Toggle slider checkbox */
+#toggle-slider-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 5px;
+}
+/* Hide the default checkbox */
+input[type=checkbox] {
+    display: none;
+}
+
+/* Create the slider */
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 100px;
+    height: 50px;
+    background-color: #dff7fa;
+    border-radius: 25px;
+    position: relative;
+    transition: all .4s ease-out; /* transitions the background color*/
+}
+    /* Create the knob on the slider (adjusted in the label as a container)*/
+    label:after {
+        content: ''; /* none would delete the element so we need an empty string here*/
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 40px;
+        height: 40px;
+        background-color: #a5cace;
+        border-radius: 50%;
+        transition: all .4s ease-out; /* transitions the knob color*/
+    }
+
+/* get the label (slider) immediately after the checked input */
+input:checked + label {
+    background: #96e7ef;
+}
+    /* get the label:after (knob) immediately after the checked input */
+    input:checked + label:after {
+        transform: translate3d(50px, 0, 0); /* moves 50px on the X axis (3d processes on the video card) */
+        background-color: #1d6269; 
+    }
+
+/******************* Page Loader */
+#page-loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+/* Style the svg circles */
+#page-loader {
+    width: 150px;
+    height: 150px;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* actually styles the circles */
+#page-loader circle {
+    fill: none;
+    stroke-width: 10;
+}
+
+    #page-loader circle:nth-child(1) {
+        stroke: paleturquoise; /* Sets the color of the stroke (ourside of the circle)*/
+        stroke-dasharray: 70; /* cuts the circle into smaller pieces*/
+        stroke-linecap: round; /*rounds the end of the stroke*/
+        animation-delay: -.2s; /*sets the delay for each circle and their animation*/
+    }
+    #page-loader circle:nth-child(2) {
+        stroke: salmon;
+        stroke-dasharray: 130; 
+        stroke-linecap: round;
+        animation-delay: -.4s;
+    }
+    #page-loader circle:nth-child(3) {
+        stroke: lightskyblue;
+        stroke-dasharray: 200; 
+        stroke-linecap: round;
+        animation-delay: -.6s;
+    }
+    #page-loader circle:nth-child(4) {
+        stroke: khaki;
+        stroke-dasharray: 280; 
+        stroke-linecap: round;
+        stroke-dashoffset: -100; /* offsets the stroke*/
+        animation-delay: -.8s;
+    }
+
+/* Animate the circles */
+@keyframes loader {
+    50% { /*50% allows the circle to return to the exact same position it starts at*/
+        transform: rotate(360deg);
+    }
+}
+
+#page-loader circle {
+    /* animation-name: loader;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+    is the same as the following: */
+    animation: loader 4s infinite ease-in-out;
+
+    transform-origin: center center; /* 50% 50%*/
+}
+
+/******************* Card Notification */
+
+/* Style the card notification */
+#notification {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    background: rgba(255, 255, 255, 0.836);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2rem 3rem 2rem 2rem;
+    box-shadow: 2px 2px 4px 0;
+}
+
+    /* Syles the green bar inside the card */
+    #notification:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 100%;
+        background-color: #8bc82f;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 2px 0 0 2px;
+    }
+
+#notification p {
+    margin: 0 0 1rem 0;
+}
+    #notification p:last-child {
+        margin: 0;
+        color: rgba(0, 0, 0, .6);
+    }
+
+/* create the animation */
+@keyframes slideLeft{
+    0%, 100% { /*the start and end are off the screen*/
+        transform: translate3d(100%, 0, 0);
+    }
+    10%, 90% { /*inbetween puts it 2 rems from the right side of the page*/
+        transform: translate3d(-2rem, 0, 0);
+    }
+}
+
+/* Add the animation to the card */
+#notification {
+    transform: translate3d(100%, 0, 0);
+    animation: slideLeft 5s 1s 1 cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}

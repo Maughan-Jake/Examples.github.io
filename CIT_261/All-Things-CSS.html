@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta name="Robots" content="Follow, Index" />
+    <meta name="Distribution" content="Worldwide" />
+    <meta name="Rating" content="General" />
+
+    <meta name="DESCRIPTION" content="Proficiency with CSS" />
+    <meta name="KEYWORDS" content="CIT 261, BYU-Idaho, CSS" />
+    <meta name="Author" content="Jake Maughan" />
+    <meta name="School" content="BYU-Idaho" />
+    <link rel="stylesheet" href="styles/All-Things-Css.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body onload="addPadding()">
+    <header>
+        <h1>Jake Maughan</h1>
+        <h2>CIT 261 - All Things CSS</h2>
+        <h3>This page covers the following:</h3>
+        <ul>
+            <li>Creating CSS3 Transitions and Animations in CSS and triggering them with JavaScript Events Including
+                those for Mobile Devices ( Ex. onTouchBegin, onLoad, etc.)</li>
+            <li>Designing, Defining, and Triggering CSS3 Transitions without Custom Libraries</li>
+            <li>Designing, Defining, and Triggering CSS3 Transforms without Custom Libraries</li>
+            <li>Designing, Defining, and Triggering CSS3 Animations without Custom Libraries</li>
+        </ul>
+        <a href="index.html">Home</a>
+    </header>
+
+    <h3>To begin select from the following options to transform the image with no animations:</h3>
+    <button class="button" onclick="matrixCSS()">matrix(1, 2, 3, 4, 5, 6)</button>
+    <button class="button" onclick="translateCSS()">translate(120px, 50%)</button>
+    <button class="button" onclick="scaleCSS()">scale(2)</button>
+    <button class="button" onclick="rotateCSS()">rotate(3.5turn)</button>
+    <button class="button" onclick="skewCSS()">skew(30deg, 20deg)</button>
+    <button class="button" onclick="resetCSS()">RESET</button>
+    <p>The padding in these buttons was added through JS when the page loaded</p>
+
+    <div id="output">
+        <section id="default-example">
+            <img id="example-element" src="images/Jake-Mon-Logo.png" alt="Jake-Mon Logo">
+        </section>
+    </div>
+
+    <h3>Hover bellow to see the different transition effects:</h3>
+
+    <div class="container">
+        <div class="circle0">linear</div>
+        <div class="circle1">ease</div>
+        <div class="circle2">ease-in</div>
+        <div class="circle3">ease-out</div>
+        <div class="circle4">ease-in-out</div>
+        <div class="circle5">custom</div>
+    </div>
+
+    <h3>To see CSS animations at work look below!</h3>
+
+    <h4>Click the toggle</h4>
+    <div id="toggle-slider-container"> 
+        <input type="checkbox" id="toggle-slider">
+        <label for="toggle-slider"></label>
+    </div>
+
+    <h4>Watch the screen loader created with CSS animation</h4>
+    <div id="page-loader-container">
+        <svg id="page-loader">
+            <circle cx="75" cy="75" r="20" />
+            <circle cx="75" cy="75" r="35" />
+            <circle cx="75" cy="75" r="50" />
+            <circle cx="75" cy="75" r="65" />
+        </svg>
+    </div>
+
+    <div id="notification">
+        <p><strong>Success!</strong></p>
+        <p>This animation loaded with css</p>
+    </div>
+
+    <h4>Move your mouse just under me</h4>
+    <div id="color-swatch"></div>
+    <p>The change in colors is triggered by a mousemove event listener in JS</p>
+
+</body>
+
+<script>
+    // Transform Functions
+    function matrixCSS() {
+        var myElement = document.querySelector("#example-element");
+        myElement.style.transform = "matrix(1, 2, 3, 4, 5, 6)";
+        myElement.style.transition = "transform 2s";
+    }
+
+    function translateCSS() {
+        var myElement = document.querySelector("#example-element");
+        myElement.style.transform = "translate(120px,50%)";
+        myElement.style.transition = "transform 2s";
+    }
+
+    function scaleCSS() {
+        var myElement = document.querySelector("#example-element");
+        myElement.style.transform = "scale(2)";
+        myElement.style.transition = "transform 2s";
+    }
+
+    function rotateCSS() {
+        var myElement = document.querySelector("#example-element");
+        myElement.style.transform = "rotate(3.5turn)";
+        myElement.style.transition = "transform 2s";
+    }
+
+    function skewCSS() {
+        var myElement = document.querySelector("#example-element");
+        myElement.style.transform = "skew(30deg, 20deg)";
+        myElement.style.transition = "transform 2s";
+    }
+
+    function resetCSS() {
+        var myElement = document.querySelector("#example-element");
+        myElement.style.transform = "none";
+        myElement.style.transition = "transform 2s";
+    }
+
+    // Transition Functions
+
+    // only works with the first element selected
+    // toggles the class is-active inside the query selector
+    var button = document.querySelector('.button')
+    button.addEventListener('click', _ => button.classList.toggle('is-active'))
+    
+    // onload calls this to increase padding with buttons
+    function addPadding() {
+        var buttons = document.querySelectorAll('button'), i;
+        for (i = 0; i < buttons.length; ++i) {
+            buttons[i].style.padding = "10px";
+            buttons[i].style.margin = "10px";
+        }   
+    }
+
+    var colorSwatch = document.getElementById("color-swatch");
+        // Set styles of color swatch
+        colorSwatch.style.height = '255px';
+        colorSwatch.style.width = '255px';
+        colorSwatch.style.margin = ' 20px 20px';
+        // Add Event Listener to Element
+        colorSwatch.addEventListener('mousemove', function(event) {
+            var x = event.clientX - 20;
+            var y = event.clientY - 640;
+            colorSwatch.textContent = x + ', ' + y;
+            colorSwatch.style.backgroundColor = 'rgb(' + x + ', ' + y + ', 100)';
+        })
+
+</script>
+
+</html>

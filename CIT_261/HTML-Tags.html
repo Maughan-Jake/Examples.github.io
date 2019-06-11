@@ -1,31 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
     <meta http-equiv="Content-Language" content="en-us" />
     <meta name="Robots" content="Follow, Index" />
     <meta name="Distribution" content="Worldwide" />
     <meta name="Rating" content="General" />
 
-    <meta name="DESCRIPTION" content="Proficiency with the Code Topics Page BYU-Idaho CIT 261 Class" />
+    <meta name="DESCRIPTION" content="Proficiency with HTML tags" />
     <meta name="KEYWORDS" content="CIT 261, BYU-Idaho, Home Page" />
     <meta name="Author" content="Jake Maughan" />
     <meta name="School" content="BYU-Idaho" />
         <link rel="stylesheet" href="styles/main.css">
         <script src="scripts/main.js" async defer></script>
     </head>
+    <style>
+        canvas {
+            border: 1px solid black;
+            width: 50%;
+
+        }
+    </style>
     <body>
         <header>
             <h1>Jake Maughan</h1>
-            <h2>CIT 261 - </h2>
+            <h2>CIT 261 - HTML Tags </h2>
             <a href="index.html">Home</a>
         </header>
 
-        <main>
+        <main id="html-elements">
+            <div>
+                <canvas></canvas>
+            </div>
 
+            <div>
+                <audio controls>
+                    <source src="SampleAudio_0.4mb.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YJIkM2Mm554" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <video width="320" height="240" controls>
+                    <source src="SampleVideo_1280x720_30mb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
         </main>
-        <footer></footer>
+        <script>
+            var canvas = document.querySelector('canvas');
+            var c = canvas.getContext('2d');
+            c.fillRect(100, 30, 100, 100);
+        </script>
+
     </body>
 </html>
