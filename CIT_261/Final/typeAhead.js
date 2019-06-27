@@ -1,4 +1,6 @@
-const endpoint =  'http://gomashup.com/json.php?fds=geo/usa/zipcode/state/IL&jsoncallback=';
+const endpoint =  'https://raw.githubusercontent.com/Maughan-Jake/Maughan-Jake.github.io/master/CIT_261/Final/zip.json';
+
+
 
 // Create an array that will not be changed
 const cities = [];
@@ -23,6 +25,24 @@ function findMatches(wordToMatch, cities) {
     return cities.filter(place => {
         // Find out if the zip codes match what is searched
         const regex = new RegExp(wordToMatch, 'gi'); //The RegExp constructor creates a regular expression object for matching text with a pattern
-        return place.City.match(regex) || place.state.match(regex)
+        return place.Zipcode.match(regex);
     });
 }
+
+function displayMatches() {
+    const matchArray = findMatches(this.value, cities);
+    const html = matchArray.map(place => {
+        return `
+        <li>
+            <span class="name">${place.Zipcode}, ${place.State}</span>
+        </li>
+        `;
+    }).join('');
+    suggestions.innerHTML = html;
+}
+
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
+
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
