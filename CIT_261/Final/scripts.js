@@ -18,7 +18,7 @@ function weatherSummary(zip) {
 
     // uses the zip enterd by the user to pull data on the correct location
     const apiURL = 'https://api.openweathermap.org/data/2.5/weather?zip=' + zip + '&APPID=28af81603ac21f0fe4c75478dad21818&units=imperial';
-    console.log(apiURL);
+    // console.log(apiURL);
     // if it loads correctly and there are no errors
     if (this.readyState == 4 && this.status == 200) {
         // Stringify
@@ -52,7 +52,7 @@ function sevenDayForecast(zip) {
     var forecastRequest = new XMLHttpRequest();
     var apiURL = 'https://api.openweathermap.org/data/2.5/forecast/?zip=' + zip + '&APPID=28af81603ac21f0fe4c75478dad21818&units=imperial';
     forecastRequest.open('Get', apiURL , true);
-    console.log(apiURL);
+    // console.log(apiURL);
     forecastRequest.send();
 
     forecastRequest.onload = function () {
@@ -71,7 +71,7 @@ function sevenDayForecast(zip) {
         document.getElementById("dayTemp3").innerHTML = dayTemp3;
         document.getElementById("dayTemp4").innerHTML = dayTemp4;
 
-        console.log(forecastData);
+        // console.log(forecastData);
     }
 
 }
