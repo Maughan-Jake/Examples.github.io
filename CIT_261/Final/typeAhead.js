@@ -11,13 +11,9 @@ function findMatches(wordToMatch, cities) {
     return cities.filter(place => {
         // Find out if the zip codes match what is searched
         const regex = new RegExp(wordToMatch, 'gi'); //The RegExp constructor creates a regular expression object for matching text with a pattern
-        return place.City.match(regex) || place.State.match(regex);
+        return place.City.match(regex) || place.State.match(regex) || (place.City.match(regex) + ',' + place.State.match(regex));
     });
-
-
-    function numberWithCommas(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-      }}
+}
 
 function displayMatches() {
     const matchArray = findMatches(this.value, cities);
