@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,71 +10,72 @@
     <script src="scripts.js" async defer></script>
     <script src="typeAhead.js" async defer></script>
 </head>
+
 <body onload="getData()">
     <header>
     </header>
     <main>
 
-            <form class="search-form">
-                    <input type="text" class="search" placeholder="City">
-                    <ul class="suggestions">
-                      <li>Filter for a city</li>
-                      <li>or a state</li>
-                    </ul>
-                  </form>
-        <!-- <section>Please Enter Your Zip Code:
-                <div id="inputBox">
-                        <input type="number" maxlength="5" id="zip" placeholder="e.g. 21113" >
-                        <button id="weatherButton" onclick="storeZip(), getData()">See the Weather</button>
-                     </div> -->
-        <!-- </section><br><br><br><br><br> -->
-        
-        <!-- <h2>Town of <span id="cityName"></span></h2>
+        <form class="search-form">
+            <input type="text" class="search" placeholder="City">
+            <ul class="suggestions">
+                <li>Filter for a city</li>
+                <li>or a state</li>
+            </ul>
+        </form>
 
-        <div class="hero">
-            <section class="weatherSummary">
-                <h3>Weather Summary</h3>
-                <div class="weatherDetails">
-                    <img src="" alt="">
-                    <p class="label">Temperature:</p>
-                    <p class="value"><span id="current-temp"></span> &deg;F</p>
-                    <p class="label">Humidity:</p>
-                    <p class="value"><span id="humidity"></span>%</p>
-                    <p class="label">Wind Speed:</p>
-                    <p class="value"><span id="windSpeed"></span> mph</p>
-                </div>
+        
+
+
+        <div class="weather-info">
+            <h2>Town of <span id="cityName"></span></h2>
+
+            <div class="hero">
+                <section class="weatherSummary">
+                    <h3>Weather Summary</h3>
+                    <div class="weatherDetails">
+                        <img src="" alt="">
+                        <p class="label">Temperature:</p>
+                        <p class="value"><span id="current-temp"></span> &deg;F</p>
+                        <p class="label">Humidity:</p>
+                        <p class="value"><span id="humidity"></span>%</p>
+                        <p class="label">Wind Speed:</p>
+                        <p class="value"><span id="windSpeed"></span> mph</p>
+                    </div>
+                </section>
+            </div>
+
+            <section class="forecast">
+                <h3>High Temperature Forecast</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Forecast</th>
+                            <td><span id="dayTemp0"></span>&deg;F</td>
+                            <td><span id="dayTemp1"></span>&deg;F</td>
+                            <td><span id="dayTemp2"></span>&deg;F</td>
+                            <td><span id="dayTemp3"></span>&deg;F</td>
+                            <td><span id="dayTemp4"></span>&deg;F</td>
+                            <td><span id="dayTemp5"></span>&deg;F</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </div>
-
-        <section class="forecast">
-            <h3>High Temperature Forecast</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>Mon</th>
-                        <th>Tue</th>
-                        <th>Wed</th>
-                        <th>Thu</th>
-                        <th>Fri</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Forecast</th>
-                        <td><span id="dayTemp0"></span>&deg;F</td>
-                        <td><span id="dayTemp1"></span>&deg;F</td>
-                        <td><span id="dayTemp2"></span>&deg;F</td>
-                        <td><span id="dayTemp3"></span>&deg;F</td>
-                        <td><span id="dayTemp4"></span>&deg;F</td>
-                        <td><span id="dayTemp5"></span>&deg;F</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
     </main>
     <footer>
 
-    </footer> -->
+    </footer>
 </body>
+
 </html>

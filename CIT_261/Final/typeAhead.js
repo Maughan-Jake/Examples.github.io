@@ -32,9 +32,9 @@ function matchesCity( { City, State }, input ) {
 
 function itemizeCity( { City, State, Zipcode }, input ) {
     return (
-        `<li>
+        `<li onclick="storeZip(${Zipcode})">
             <span>${highlight( City, input )}, ${highlight( State, input )}</span>
-            <span class="population">${ Zipcode }</span>
+            <span class="zipCode">${ Zipcode }</span>
         </li>`
     );
 }

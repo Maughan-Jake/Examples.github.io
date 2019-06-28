@@ -1,5 +1,5 @@
-function storeZip() {
-    localStorage.setItem("userZip", document.getElementById("zip").value);
+function storeZip(zip) {
+    localStorage.setItem("userZip", zip);
  }
  
  function deleteUser() {
