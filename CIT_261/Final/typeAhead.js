@@ -3,39 +3,45 @@ const endpoint =  'https://raw.githubusercontent.com/Maughan-Jake/Maughan-Jake.g
 // Create an array that will not be changed
 const cities = [];
 
-fetch(endpoint)
-    .then(blob => blob.json())
-    .then(data => cities.push(...data));
+fetch( endpoint )
+    .then( ( response ) => response.json() )
+    .then( ( data ) => cities.push( ...data ) );
 
-function findMatches(wordToMatch, cities) {
-    return cities.filter(place => {
-        // Find out if the zip codes match what is searched
-        const regex = new RegExp(wordToMatch, 'gi'); //The RegExp constructor creates a regular expression object for matching text with a pattern
-        return place.City.match(regex) || place.State.match(regex) || (place.City.match(regex) + ',' + place.State.match(regex));
-    });
+const suggestions = document.querySelector( '.suggestions' );
+const defaultItems = suggestions.innerHTML;
+
+document.querySelector( '.search' ).addEventListener( 'input', handleInput );
+
+function handleInput() {
+    const input = this.value;
+
+    if ( input ) {
+        suggestions.innerHTML = cities
+            .filter( ( City ) => matchesCity( City, input ) )
+            .map( ( City ) => itemizeCity( City, input ) )
+            .join( '' );
+        return;
+    }
+    suggestions.innerHTML = defaultItems;
 }
 
-function displayMatches() {
-    const matchArray = findMatches(this.value, cities);
-    const html = matchArray.map(place => {
-        const regex = new RegExp(this.value, 'gi');
-        const cityName = place.City.replace(regex, `<span class="hl">${this.value}</span>`);
-        const stateName = place.State.replace(regex, `<span class="hl">${this.value}</span>`);
-        return `
-        <li>
-            <span class="name">${cityName}, ${stateName}</span>
-            <span class="zipcode">${place.Zipcode}</span>
-        </li>
-        `;
-    }).join('');
-    suggestions.innerHTML = html;
+function matchesCity( { City, State }, input ) {
+    const regExp = new RegExp( input, 'i' );
+    return regExp.test( City ) || regExp.test( State );
 }
 
-const searchInput = document.querySelector('.search');
-const suggestions = document.querySelector('.suggestions');
+function itemizeCity( { City, State, Zipcode }, input ) {
+    return (
+        `<li>
+            <span>${highlight( City, input )}, ${highlight( State, input )}</span>
+            <span class="population">${ Zipcode }</span>
+        </li>`
+    );
+}
 
-searchInput.addEventListener('change', displayMatches);
-searchInput.addEventListener('keyup', displayMatches);
+function highlight( text, input ) {
+    return text.replace( new RegExp( input, 'gi' ), ( match ) => `<span class="hl">${match}</span>` );
+}
 
 /* The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP 
 *   pipeline, such as requests and responses. It also provides a global fetch() method that provides 
