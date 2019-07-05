@@ -1,16 +1,17 @@
 function storeZip(zip) {
     localStorage.setItem("userZip", zip);
- }
- 
- function deleteUser() {
+    getData();
+}
+
+function deleteUser() {
     localStorage.clear();
     location.reload(true);
- }
+}
 
- function getData() {
+function getData() {
     weatherSummary(localStorage.getItem("userZip"));
     sevenDayForecast(localStorage.getItem("userZip"));
- }
+}
 
 function weatherSummary(zip) {
     // Ajax calls to the openweathermap api
@@ -33,25 +34,25 @@ function weatherSummary(zip) {
     weatherRequest.send();
 
     weatherRequest.onload = function () {
-    var weatherData = JSON.parse(weatherRequest.responseText);
-    var temp = weatherData.main.temp;
-    var humidity = weatherData.main.humidity;
-    var windSpeed = weatherData.wind.speed;
-    var cityName = weatherData.name;
-    //var icon = weatherData['weather'][0]['icon'];
+        var weatherData = JSON.parse(weatherRequest.responseText);
+        var temp = weatherData.main.temp;
+        var humidity = weatherData.main.humidity;
+        var windSpeed = weatherData.wind.speed;
+        var cityName = weatherData.name;
+        //var icon = weatherData['weather'][0]['icon'];
 
-    document.getElementById("current-temp").innerHTML = temp;
-    document.getElementById("humidity").innerHTML = humidity;
-    document.getElementById("windSpeed").innerHTML = windSpeed;
-    document.getElementById("cityName").innerHTML = cityName;
-    //document.getElementById('icon').src = "http://openweathermap.org/img/w/" + icon + ".png";
+        document.getElementById("current-temp").innerHTML = temp;
+        document.getElementById("humidity").innerHTML = humidity;
+        document.getElementById("windSpeed").innerHTML = windSpeed;
+        document.getElementById("cityName").innerHTML = cityName;
+        //document.getElementById('icon').src = "http://openweathermap.org/img/w/" + icon + ".png";
     }
 }
 
 function sevenDayForecast(zip) {
     var forecastRequest = new XMLHttpRequest();
     var apiURL = 'https://api.openweathermap.org/data/2.5/forecast/?zip=' + zip + '&APPID=28af81603ac21f0fe4c75478dad21818&units=imperial';
-    forecastRequest.open('Get', apiURL , true);
+    forecastRequest.open('Get', apiURL, true);
     // console.log(apiURL);
     forecastRequest.send();
 
