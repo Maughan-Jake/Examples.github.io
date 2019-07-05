@@ -1,71 +1,308 @@
+/************************************************ 
+*General
+*************************************************/
+body,
+#slide-wrapper,
+.slide-content {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100vh;
+}
 
+/* I customized the wicked cool background on my homepage at SVGBackgrounds.com.  */
+body {
+  background-color: #ff9d00;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ff9d00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fb8d17' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f47d24' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ed6e2d' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23e35f34' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23d85239' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23cc453e' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23be3941' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23b02f43' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a02644' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23901e44' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23801843' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%236f1341' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%235e0f3d' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234e0c38' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%233e0933' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%232e062c' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+}
 
-  /* I customized the wicked cool background on my homepage at SVGBackgrounds.com.  */
-  body {
-    background-color: #ffff99;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1000 1000'%3E%3Cg fill='%23ffd573'%3E%3Cpolygon points='1000 -50 0 -50 500 450'/%3E%3Cpolygon points='550 500 1050 1000 1050 0'/%3E%3Cpolygon points='-50 0 -50 1000 450 500'/%3E%3Cpolygon points='0 1050 1000 1050 500 550'/%3E%3C/g%3E%3Cg fill='%23ffaa4d'%3E%3Cpolygon points='1000 -133.3 0 -133.3 500 366.7'/%3E%3Cpolygon points='633.3 500 1133.3 1000 1133.3 0'/%3E%3Cpolygon points='-133.3 0 -133.3 1000 366.7 500'/%3E%3Cpolygon points='0 1133.3 1000 1133.3 500 633.3'/%3E%3C/g%3E%3Cg fill='%23ff8026'%3E%3Cpolygon points='1000 -216.7 0 -216.7 500 283.3'/%3E%3Cpolygon points='716.7 500 1216.7 1000 1216.7 0'/%3E%3Cpolygon points='-216.7 0 -216.7 1000 283.3 500'/%3E%3Cpolygon points='0 1216.7 1000 1216.7 500 716.7'/%3E%3C/g%3E%3Cg fill='%23ff5500'%3E%3Cpolygon points='1000 -300 0 -300 500 200'/%3E%3Cpolygon points='800 500 1300 1000 1300 0'/%3E%3Cpolygon points='-300 0 -300 1000 200 500'/%3E%3Cpolygon points='0 1300 1000 1300 500 800'/%3E%3C/g%3E%3Cg fill-opacity='0.41'%3E%3Cpolygon fill='%23ffef00' points='0 707.1 0 292.9 292.9 0 707.1 0 1000 292.9 1000 707.1 707.1 1000 292.9 1000'/%3E%3Cg fill='%23ffc900'%3E%3Cpolygon points='464.6 -242.5 -242.5 464.6 464.6 464.6'/%3E%3Cpolygon points='535.4 464.6 1242.5 464.6 535.4 -242.5'/%3E%3Cpolygon points='-242.5 535.4 464.6 1242.5 464.6 535.4'/%3E%3Cpolygon points='535.4 1242.5 1242.5 535.4 535.4 535.4'/%3E%3C/g%3E%3Cg fill='%23ffa200'%3E%3Cpolygon points='405.7 -301.4 -301.4 405.7 405.7 405.7'/%3E%3Cpolygon points='594.3 405.7 1301.4 405.7 594.3 -301.4'/%3E%3Cpolygon points='-301.4 594.3 405.7 1301.4 405.7 594.3'/%3E%3Cpolygon points='594.3 1301.4 1301.4 594.3 594.3 594.3'/%3E%3C/g%3E%3Cg fill='%23ff7c00'%3E%3Cpolygon points='346.8 -360.3 -360.3 346.8 346.8 346.8'/%3E%3Cpolygon points='653.2 346.8 1360.3 346.8 653.2 -360.3'/%3E%3Cpolygon points='-360.3 653.2 346.8 1360.3 346.8 653.2'/%3E%3Cpolygon points='653.2 1360.3 1360.3 653.2 653.2 653.2'/%3E%3C/g%3E%3Cg fill='%23ff5500'%3E%3Cpolygon points='287.9 -419.2 -419.2 287.9 287.9 287.9'/%3E%3Cpolygon points='712.1 287.9 1419.2 287.9 712.1 -419.2'/%3E%3Cpolygon points='-419.2 712.1 287.9 1419.2 287.9 712.1'/%3E%3Cpolygon points='712.1 1419.2 1419.2 712.1 712.1 712.1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  
-  .search-form {
-    max-width: 400px;
-    margin: 50px auto;
-  }
+main {
+  text-align: center;
+}
 
-  input {
-    width: 100%;
-    padding: 20px;
+h1 {
+  color: #fff;
+}
+
+/************************************************ 
+* Page Slider
+*************************************************/
+
+#slide-wrapper {
+  position: relative;
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/************************************************ 
+* Search form
+*************************************************/
+.search-form {
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+}
+
+input.search {
+  margin: 0;
+  text-align: center;
+  outline: 0;
+  border: 5px solid #F7F7F7;
+  width: 120%;
+  left: -15%;
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  border-radius: 5px;
+  font-size: 40px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+}
+
+.suggestions {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /*perspective: 20px;*/
+}
+
+.suggestions li {
+  background: white;
+  list-style: none;
+  border-bottom: 1px solid #D8D8D8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+  margin: 0;
+  padding: 20px;
+  transition: background 1s, color .1s;
+  display: flex;
+  justify-content: space-between;
+}
+
+.suggestions li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: linear-gradient(to bottom, #ffffff 0%, #EFEFEF 100%);
+}
+
+.suggestions li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: linear-gradient(to top, #ffffff 0%, #EFEFEF 100%);
+}
+
+span.zipCode {
+  font-size: 15px;
+}
+
+.suggestions li:hover {
+  background: #210024;
+  color: #fff;
+}
+
+.hl {
+  background: #ff9D00;
+  color: #080808;
+}
+
+/************************************************ 
+* Loading Screen
+*************************************************/
+
+#page-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+/* Style the svg circles */
+#page-loader {
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+/* actually styles the circles */
+#page-loader circle {
+  fill: none;
+  stroke-width: 10;
+}
+
+#page-loader circle:nth-child(1) {
+  stroke: paleturquoise;
+  /* Sets the color of the stroke (ourside of the circle)*/
+  stroke-dasharray: 70;
+  /* cuts the circle into smaller pieces*/
+  stroke-linecap: round;
+  /*rounds the end of the stroke*/
+  animation-delay: -.2s;
+  /*sets the delay for each circle and their animation*/
+}
+
+#page-loader circle:nth-child(2) {
+  stroke: salmon;
+  stroke-dasharray: 130;
+  stroke-linecap: round;
+  animation-delay: -.4s;
+}
+
+#page-loader circle:nth-child(3) {
+  stroke: lightskyblue;
+  stroke-dasharray: 200;
+  stroke-linecap: round;
+  animation-delay: -.6s;
+}
+
+#page-loader circle:nth-child(4) {
+  stroke: khaki;
+  stroke-dasharray: 280;
+  stroke-linecap: round;
+  stroke-dashoffset: -100;
+  /* offsets the stroke*/
+  animation-delay: -.8s;
+}
+
+/* Animate the circles */
+@keyframes loader {
+  50% {
+    /*50% allows the circle to return to the exact same position it starts at*/
+    transform: rotate(360deg);
   }
-  
-  input.search {
-    margin: 0;
-    text-align: center;
-    outline: 0;
-    border: 10px solid #F7F7F7;
-    width: 120%;
-    left: -15%;
-    position: relative;
-    top: 10px;
-    z-index: 2;
-    border-radius: 5px;
-    font-size: 40px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
-  }
-  
-  .suggestions {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    /*perspective: 20px;*/
-  }
-  
-  .suggestions li {
-    background: white;
-    list-style: none;
-    border-bottom: 1px solid #D8D8D8;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
-    margin: 0;
-    padding: 20px;
-    transition: background 0.2s;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .suggestions li:nth-child(even) {
-    transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
-    background: linear-gradient(to bottom,  #ffffff 0%,#EFEFEF 100%);
-  }
-  
-  .suggestions li:nth-child(odd) {
-    transform: perspective(100px) rotateX(-3deg) translateY(3px);
-    background: linear-gradient(to top,  #ffffff 0%,#EFEFEF 100%);
-  }
-  
-  span.population {
-    font-size: 15px;
-  }
-  
-  .hl {
-    background: #ffc600;
-  }
+}
+
+#page-loader circle {
+  /* animation-name: loader;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; 
+    is the same as the following: */
+  animation: loader 4s infinite ease-in-out;
+
+  transform-origin: center center;
+  /* 50% 50%*/
+}
+
+/************************************************ 
+* Weather info
+*************************************************/
+
+.weather-info {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  background: #df9f29b0;
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+}
+
+/*********** Weather summary */
+.weatherSummary {
+  border: 1px solid black;
+  width: 250px;
+  padding: 3px 5px 10px 5px;
+  background: #8dccc4;
+  color: #080808;
+  opacity: .9;
+}
+
+.weatherDetails {
+  border-top: 1.5px solid black;
+  margin: 0 10px 0 10px;
+}
+
+section h3 {
+  margin: 5px 0 2px 10px;
+}
+
+.label {
+  text-align: right;
+  display: inline-block;
+  width: 100px;
+  padding-right: 5px;
+  margin: 1px 1px;
+}
+
+.value {
+  text-align: left;
+  display: inline-block;
+  width: 100px;
+  margin: 0 0 0 5px;
+}
+
+.forecast h3 {
+  text-align: center;
+}
+
+/*********** 5 Day forecast */
+table {
+  border: 1.5px solid black;
+  width: 90%;
+  margin: 5px auto 15px;
+
+  background: rgba(255, 255, 255, 0.712);
+  color: #201d23;
+  border-radius: 5px;
+}
+
+table,
+th,
+td {
+  border: 1.5px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 10px;
+}
+
+/************************************************ 
+* Return button 
+*************************************************/
+
+button {
+  border: 5px solid transparent;
+  background: #aed6d1;
+  color: #55706d;
+  border-radius: 40px;
+  padding: 15px 30px;
+  overflow: hidden;
+  width: 200px;
+  transition: all 1.2s, border 0.5s 1.2s, box-shadow 0.3s 1.5s;
+  white-space: nowrap;
+  text-indent: 23px;
+  font-weight: bold;
+}
+
+button span {
+  display: inline-block;
+  transform: translateX(300px);
+  font-weight: normal;
+  opacity: 0;
+  transition: opacity 0.1s 0.5s, transform 0.4s 0.5s;
+}
+
+button:hover {
+  text-indent: 0;
+  background: #55706d;
+  color: #ffe8a3;
+  width: 250px;
+  border: 5px solid #8dccc4;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
+}
+
+button:hover span {
+  transform: translateX(0);
+  opacity: 1;
+}
