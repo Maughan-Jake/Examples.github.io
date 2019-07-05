@@ -2,7 +2,7 @@ let sliderScreens = document.querySelectorAll('.slide');
 
 // Clear all screens
 function reset() {
-    for(let i = 0; i < sliderScreens.length; i++){
+    for (let i = 0; i < sliderScreens.length; i++) {
         sliderScreens[i].style.display = 'none';
     }
 }
@@ -20,16 +20,15 @@ function restart() {
 }
 
 // Show next
-function slideRight(){
+function slideRight() {
     reset();
     sliderScreens[1].style.display = 'block';
     setTimeout(slideFinal, 2500);
 }
 
-function slideFinal(){
+function slideFinal() {
     reset();
     sliderScreens[2].style.display = 'block';
 }
 
 startSlide();
-
