@@ -233,7 +233,7 @@ span.zipCode {
   text-shadow: 1px 1px #fff;
 }
 
-.label  {
+.label {
   font-weight: bold;
   margin-bottom: 0px;
   background: #FF9D00;
@@ -246,17 +246,19 @@ span.zipCode {
 }
 
 @keyframes text {
-  0%{
+  0% {
     color: #FF9D00;
     margin-bottom: -35px;
   }
-  30%{
+
+  30% {
     letter-spacing: 5px;
     margin-bottom: -35px;
   }
-  85%{
+
+  85% {
     letter-spacing: 2px;
-    margin-bottom: -35px; 
+    margin-bottom: -35px;
   }
 }
 
@@ -264,7 +266,9 @@ span.zipCode {
   text-align: center;
 }
 
-/*********** 5 Day forecast */
+/************************************************ 
+* 5 Day forecast
+*************************************************/
 table {
   width: 90%;
   margin: 5px auto 15px;
@@ -281,6 +285,23 @@ td {
   text-align: center;
   padding: 10px;
 }
+
+table {
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 /************************************************ 
 * Return button 
