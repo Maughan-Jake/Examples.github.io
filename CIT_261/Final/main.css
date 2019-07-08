@@ -1,12 +1,14 @@
 /************************************************ 
 *General
 *************************************************/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+
 body,
 #slide-wrapper,
 .slide-content {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   width: 100%;
   height: 100vh;
 }
@@ -204,43 +206,58 @@ span.zipCode {
   justify-items: center;
   align-items: center;
   text-align: center;
-  background: #df9f29b0;
-  color: rgb(0, 0, 0);
+  background: #210024;
+  color: #fff;
   border-radius: 15px;
+  width: 90%;
 }
 
 /*********** Weather summary */
 .weatherSummary {
-  border: 1px solid black;
-  width: 250px;
-  padding: 3px 5px 10px 5px;
-  background: #8dccc4;
-  color: #080808;
+  width: 90%;
+  background: #212d40;
+  color: #fff;
   opacity: .9;
+  border-radius: 5px;
 }
 
-.weatherDetails {
-  border-top: 1.5px solid black;
-  margin: 0 10px 0 10px;
-}
-
-section h3 {
-  margin: 5px 0 2px 10px;
-}
-
-.label {
-  text-align: right;
+.detail-box {
   display: inline-block;
-  width: 100px;
-  padding-right: 5px;
-  margin: 1px 1px;
+  margin: 20px;
+  background: #FF9D00;
+  padding: 10px;
+  color: #000;
+  border-radius: 5px;
+  height: 80px;
+  width: 140px;
+  text-shadow: 1px 1px #fff;
+}
+
+.label  {
+  font-weight: bold;
+  margin-bottom: 0px;
+  background: #FF9D00;
+  position: relative;
+  animation: text 2s 1;
 }
 
 .value {
-  text-align: left;
-  display: inline-block;
-  width: 100px;
-  margin: 0 0 0 5px;
+  font-style: oblique;
+}
+
+@keyframes text {
+  0%{
+    color: #FF9D00;
+    margin-bottom: -35px;
+  }
+  30%{
+    letter-spacing: 5px;
+    margin-bottom: -35px;
+  }
+  85%{
+    letter-spacing: 2px;
+    margin-bottom: -35px; 
+  }
 }
 
 .forecast h3 {
@@ -249,10 +266,8 @@ section h3 {
 
 /*********** 5 Day forecast */
 table {
-  border: 1.5px solid black;
   width: 90%;
   margin: 5px auto 15px;
-
   background: rgba(255, 255, 255, 0.712);
   color: #201d23;
   border-radius: 5px;
@@ -273,8 +288,8 @@ td {
 
 button {
   border: 5px solid transparent;
-  background: #aed6d1;
-  color: #55706d;
+  background: rgba(255, 255, 255, 0.712);
+  color: #000;
   border-radius: 40px;
   padding: 15px 30px;
   overflow: hidden;
@@ -283,6 +298,7 @@ button {
   white-space: nowrap;
   text-indent: 23px;
   font-weight: bold;
+  margin-top: 15px;
 }
 
 button span {
@@ -295,10 +311,10 @@ button span {
 
 button:hover {
   text-indent: 0;
-  background: #55706d;
-  color: #ffe8a3;
+  background: #210024;
+  color: #fff;
   width: 250px;
-  border: 5px solid #8dccc4;
+  border: 5px solid #FF9D00;
   box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.15);
 }
 
